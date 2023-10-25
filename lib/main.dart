@@ -1,7 +1,15 @@
+import 'package:down_app/firebase_options.dart';
 import 'package:down_app/layout/home_layout.dart';
+import 'package:down_app/layout/splash.dart';
+import 'package:down_app/moudules/app_details.dart';
+import 'package:down_app/moudules/test.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.android);
   runApp(const MyApp());
 }
 
@@ -18,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeLayout(),
+      home: AppDetails(),
     );
   }
 }

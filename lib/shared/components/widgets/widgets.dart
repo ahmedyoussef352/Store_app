@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class HotelItem extends StatefulWidget {
@@ -67,9 +69,8 @@ class _HotelItemState extends State<HotelItem> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'Call Duty Mobile',
-                            maxLines: 1,
                             style: TextStyle(fontSize: 18),
                           ),
                           Text(
@@ -77,12 +78,15 @@ class _HotelItemState extends State<HotelItem> {
                             style: TextStyle(color: Colors.grey.shade700),
                           ),
                           Row(children: [
-                            Text('4.2'),
-                            Icon(Icons.star),
-                            SizedBox(
+                            const Text('4.2'),
+                            const Icon(
+                              Icons.star,
+                              size: 15,
+                            ),
+                            const SizedBox(
                               width: 5,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.calendar_month_outlined,
                               color: Colors.blue,
                             ),

@@ -1,6 +1,6 @@
-import 'package:buttons_tabbar/buttons_tabbar.dart';
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:down_app/shared/components/components.dart';
-import 'package:down_app/shared/components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class HomeLayout extends StatefulWidget {
@@ -49,6 +49,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                             ),
                             suffixIcon: const Icon(
                               Icons.keyboard_voice_outlined,
+                              color: Colors.black,
                               size: 30,
                             ),
                             border: InputBorder.none),
@@ -104,69 +105,15 @@ class _HomeLayoutState extends State<HomeLayout> {
                 ),
               ),
               Expanded(
-                  child: TabBarView(
-                children: [
-                  list(),
-                  Center(
-                    child: list(),
-                  ),
-                  list(),
-                  list(),
-                ],
-              )),
-              // Container(
-              //   height: MediaQuery.of(context).size.height * .5,
-              //   child: DefaultTabController(
-              //     length: 3,
-              //     child: Column(
-              //       children: [
-              //         ButtonsTabBar(
-              //           unselectedLabelStyle: TextStyle(
-              //             color: Colors.white,
-              //             fontSize: MediaQuery.of(context).size.width * .045,
-              //           ),
-              //           labelStyle: const TextStyle(color: Colors.black),
-              //           borderColor: Colors.blue,
-              //           // unselectedBackgroundColor: Colors.black,
-              //           // unselectedBorderColor: Colors.green.shade300,
-              //           // backgroundColor: Colors.green.shade300,
-              //           height: MediaQuery.of(context).size.height * .06,
-              //           splashColor: Colors.green.shade300,
-              //           duration: 50,
-              //           // borderWidth: MediaQuery.of(context).size.width * .005,
-              //           radius: MediaQuery.of(context).size.width * .05,
-              //           contentPadding: EdgeInsets.symmetric(
-              //             horizontal: MediaQuery.of(context).size.width * .05,
-              //             vertical: MediaQuery.of(context).size.height * .003,
-              //           ),
-              //           physics: const BouncingScrollPhysics(),
-              //           tabs: [
-              //             Tab(
-              //               child: Text(
-              //                 'Best offers ',
-              //               ),
-              //               //
-              //             ),
-              //             const Tab(
-              //               text: 'Top rates',
-              //             ),
-              //             const Tab(
-              //               text: 'Pupular',
-              //             ),
-              //           ],
-              //         ),
-              //         SizedBox(
-              //           height: MediaQuery.of(context).size.height * .05,
-              //         ),
-              //         Expanded(
-              //           child: TabBarView(
-              //             children: [list(), list(), list()],
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //   ),
-              // ),
+                child: TabBarView(
+                  children: [
+                    Expanded(child: list()),
+                    Expanded(child: list()),
+                    Expanded(child: list()),
+                    Expanded(child: list()),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
